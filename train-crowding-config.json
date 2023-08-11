@@ -1,0 +1,95 @@
+{
+  "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+  "title": "Peak crowding on a typical autumn weekday by city and train operator, annual from 2011",
+  "description": "Peak crowding on a typical autumn weekday by city and train operator, annual data from 2011",
+  "creator": "https://www.gov.uk/government/organisations/department-for-transport",
+  "publisher": "https://www.gov.uk/government/organisations/department-for-transport",
+  "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "keywords": [
+    "trains",
+    "overcrowding",
+    "standing",
+    "services",
+    "arrivals"
+  ],
+  "columns": {
+    "Year": {
+      "from_template": "government-year"
+    },
+    "City": {
+      "from_existing": "http://qudt.org/vocab/unit/City"
+    },
+    "ONS Code": {
+      "from_template": "statistical-geography"
+    },
+    "Train operator": {
+      "from_existing": "http://vocab.example.com/train-operator"
+    },
+    "AM peak arrivals (07:00-09:59): Number of services": {
+      "type": "observations",
+      "measure": {
+        "label": "Number of services",
+        "from_existing": "https://purl.org/csv-cubed/resources/count"
+      },
+      "data_type": "integer",
+      "unit": {
+        "label": "integer",
+        "from_existing": "http://qudt.org/vocab/unit/INT"
+      }
+    },
+    "Crowding": {
+      "type": "dimension",
+      "code_list": {
+        "title": "Peak crowding on by city and train operator",
+        "summary": "Peak crowding on a typical autumn weekday by city and train operator.",
+        "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "concepts": [
+          {
+            "label": "AM peak arrivals (07:00-09:59): Number of services ",
+            "sql": "CAST(NULLIF(`AM peak arrivals (07:00-09:59): Number of services`, '') AS INTEGER)",
+            "description": "Number of services.",
+            "notation": "AM peak arrivals"
+          },
+          {
+            "label": "AM peak arrivals (07:00-09:59): PIXC ",
+            "sql": "CASE WHEN `AM peak arrivals (07:00-09:59): PIXC` IS NULL THEN NULL ELSE CAST(`AM peak arrivals (07:00-09:59): PIXC: Percentage` AS DECIMAL(10, 2)) END",
+            "description": "Percentage of passengers in excess of capacity.",
+            "notation": "AM PIXC"
+          },
+          {
+            "label": "AM peak arrivals (07:00-09:59): Passengers standing",
+            "sql": "CASE WHEN `AM peak arrivals (07:00-09:59): Passengers standing` IS NULL THEN NULL ELSE CAST(`AM peak arrivals (07:00-09:59): Passengers standing: Percentage` AS DECIMAL(10, 2)) END",
+            "description": "Passengers standing by city and train operator",
+            "notation": "AM passengers standing"
+          },{
+            "label": "PM peak arrivals (16:00-18:59): Number of services",
+            "sql": "CAST(NULLIF(`PM peak arrivals (16:00-18:59): Number of services`, '') AS INTEGER)",
+            "description": "Number of services.",
+            "notation": "PM peak arrivals"
+          },
+          {
+            "label": "PM peak arrivals (16:00-18:59): PIXC ",
+            "sql": "CASE WHEN `PM peak arrivals (16:00-18:59): PIXC` IS NULL THEN NULL ELSE CAST(`PM peak arrivals (16:00-18:59): PIXC: Passengers standing: Percentage` AS DECIMAL(10, 2)) END",
+            "description": "Percentage of passengers in excess of capacity.",
+            "notation": "PM PIXC"
+          },
+          {
+            "label": "PM peak arrivals (16:00-18:59): Passengers standing ",
+            "sql": "CASE WHEN `PM peak arrivals (16:00-18:59): Passengers standing` IS NULL THEN NULL ELSE CAST(`PM peak arrivals (16:00-18:59): Passengers standing: Passengers standing: Percentage` AS DECIMAL(10, 2)) END",
+            "description": "Passengers standing by city and train operator.",
+            "notation": "PM passengers standing"
+          }
+        ],
+        "sort_order": 0
+      }
+    },
+    "Notes": {
+      "type": "attribute",
+      "label": "Notes"
+    },
+    "Notes1": {
+      "type": "attribute",
+      "label": "Notes1"
+    }
+  }
+}
