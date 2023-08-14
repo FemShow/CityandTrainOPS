@@ -12,19 +12,23 @@
     "services",
     "arrivals"
   ],
+  "templates": {
+    "observation-status": {
+      "type": "attribute",
+      "label": "Observation Status",
+      "description": "Indicates the observation status.",
+      "uri": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
+    }
+  },
   "columns": {
     "Year": {
       "from_template": "government-year"
     },
-    "City": {
-      "from_existing": "http://qudt.org/vocab/unit/City"
-    },
+    "City": false,
     "ONS Code": {
       "from_template": "statistical-geography"
     },
-    "Train operator": {
-      "from_existing": "http://vocab.example.com/train-operator"
-    },
+    "Train operator": false,
     "AM peak arrivals (07:00-09:59): Number of services": {
       "type": "observations",
       "measure": {
@@ -42,40 +46,34 @@
       "code_list": {
         "title": "Peak crowding on by city and train operator",
         "summary": "Peak crowding on a typical autumn weekday by city and train operator.",
-        "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
         "concepts": [
           {
-            "label": "AM peak arrivals (07:00-09:59): Number of services ",
-            "sql": "CAST(NULLIF(`AM peak arrivals (07:00-09:59): Number of services`, '') AS INTEGER)",
+            "label": "AM peak arrivals (07:00-09:59): Number of services",
             "description": "Number of services.",
             "notation": "AM peak arrivals"
           },
           {
-            "label": "AM peak arrivals (07:00-09:59): PIXC ",
-            "sql": "CASE WHEN `AM peak arrivals (07:00-09:59): PIXC` IS NULL THEN NULL ELSE CAST(`AM peak arrivals (07:00-09:59): PIXC: Percentage` AS DECIMAL(10, 2)) END",
+            "label": "AM peak arrivals (07:00-09:59): PIXC",
             "description": "Percentage of passengers in excess of capacity.",
             "notation": "AM PIXC"
           },
           {
             "label": "AM peak arrivals (07:00-09:59): Passengers standing",
-            "sql": "CASE WHEN `AM peak arrivals (07:00-09:59): Passengers standing` IS NULL THEN NULL ELSE CAST(`AM peak arrivals (07:00-09:59): Passengers standing: Percentage` AS DECIMAL(10, 2)) END",
             "description": "Passengers standing by city and train operator",
             "notation": "AM passengers standing"
-          },{
+          },
+          {
             "label": "PM peak arrivals (16:00-18:59): Number of services",
-            "sql": "CAST(NULLIF(`PM peak arrivals (16:00-18:59): Number of services`, '') AS INTEGER)",
             "description": "Number of services.",
             "notation": "PM peak arrivals"
           },
           {
-            "label": "PM peak arrivals (16:00-18:59): PIXC ",
-            "sql": "CASE WHEN `PM peak arrivals (16:00-18:59): PIXC` IS NULL THEN NULL ELSE CAST(`PM peak arrivals (16:00-18:59): PIXC: Passengers standing: Percentage` AS DECIMAL(10, 2)) END",
+            "label": "PM peak arrivals (16:00-18:59): PIXC",
             "description": "Percentage of passengers in excess of capacity.",
             "notation": "PM PIXC"
           },
           {
-            "label": "PM peak arrivals (16:00-18:59): Passengers standing ",
-            "sql": "CASE WHEN `PM peak arrivals (16:00-18:59): Passengers standing` IS NULL THEN NULL ELSE CAST(`PM peak arrivals (16:00-18:59): Passengers standing: Passengers standing: Percentage` AS DECIMAL(10, 2)) END",
+            "label": "PM peak arrivals (16:00-18:59): Passengers standing",
             "description": "Passengers standing by city and train operator.",
             "notation": "PM passengers standing"
           }
@@ -84,12 +82,10 @@
       }
     },
     "Notes": {
-      "type": "attribute",
-      "label": "Notes"
+      "from_template": "observation-status"
     },
     "Notes1": {
-      "type": "attribute",
-      "label": "Notes1"
+      "from_template": "observation-status"
     }
   }
 }
