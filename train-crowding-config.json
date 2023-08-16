@@ -41,51 +41,61 @@
         "from_existing": "http://qudt.org/vocab/unit/INT"
       }
     },
-    "Crowding": {
-      "type": "dimension",
-      "code_list": {
-        "title": "Peak crowding on by city and train operator",
-        "summary": "Peak crowding on a typical autumn weekday by city and train operator.",
-        "concepts": [
-          {
-            "label": "AM peak arrivals (07:00-09:59): Number of services",
-            "description": "Number of services.",
-            "notation": "AM peak arrivals"
-          },
-          {
-            "label": "AM peak arrivals (07:00-09:59): PIXC",
-            "description": "Percentage of passengers in excess of capacity.",
-            "notation": "AM PIXC"
-          },
-          {
-            "label": "AM peak arrivals (07:00-09:59): Passengers standing",
-            "description": "Passengers standing by city and train operator",
-            "notation": "AM passengers standing"
-          },
-          {
-            "label": "PM peak arrivals (16:00-18:59): Number of services",
-            "description": "Number of services.",
-            "notation": "PM peak arrivals"
-          },
-          {
-            "label": "PM peak arrivals (16:00-18:59): PIXC",
-            "description": "Percentage of passengers in excess of capacity.",
-            "notation": "PM PIXC"
-          },
-          {
-            "label": "PM peak arrivals (16:00-18:59): Passengers standing",
-            "description": "Passengers standing by city and train operator.",
-            "notation": "PM passengers standing"
-          }
-        ],
-        "sort_order": 0
+    "PM peak arrivals (16:00-18:59): Number of services": {
+      "type": "observations",
+      "measure": {
+        "label": "Number of services",
+        "from_existing": "https://purl.org/csv-cubed/resources/count"
+      },
+      "data_type": "integer",
+      "unit": {
+        "label": "integer",
+        "from_existing": "http://qudt.org/vocab/unit/INT"
       }
     },
+    "AM peak arrivals (07:00-09:59): PIXC": {
+      "type": "observations"
+    },
     "Notes": {
-      "from_template": "observation-status"
+      "from_template": "observation-status",
+      "describes_observations": "AM peak arrivals (07:00-09:59): PIXC"
+    },
+    "AM peak arrivals (07:00-09:59): Passengers standing": {
+      "type": "observations"
     },
     "Notes1": {
-      "from_template": "observation-status"
+      "from_template": "observation-status",
+      "describes_observations": "AM peak arrivals (07:00-09:59): Passengers standing"
+    },
+    "PM peak arrivals (16:00-18:59): PIXC": {
+      "type": "observations"
+    },
+    "Notes2": {
+      "from_template": "observation-status",
+      "describes_observations": "PM peak arrivals (16:00-18:59): PIXC",
+      "label": "[x]",
+      "description": "This information not provided."
+    },
+    "Notes3": {
+      "from_template": "observation-status",
+      "describes_observations": "PM peak arrivals (16:00-18:59): PIXC",
+      "label": "[r]",
+      "description": "Due to the confidentiality of the passenger counts for individual services, figures are not shown in instances where they would be based on fewer than three services."
+    },
+    "PM peak arrivals (16:00-18:59): Passengers standing": {
+      "type": "observations"
+    },
+    "Notes4": {
+      "from_template": "observation-status",
+      "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing",
+      "label": "[x]",
+      "description": "This information not provided."
+    },
+    "Notes5": {
+      "from_template": "observation-status",
+      "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing",
+      "label": "[r]",
+      "description": "Due to the confidentiality of the passenger counts for individual services, figures are not shown in instances where they would be based on fewer than three services."
     }
   }
 }

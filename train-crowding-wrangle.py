@@ -49,16 +49,13 @@ observation_columns = [
     'PM peak arrivals (16:00-18:59): Passengers standing [note 1]'
 ]
 
-# Insert 'Notes' column as the last column
-df['Notes'] = ''
-
-# Insert 'Notes1' column as the last column
-df['Notes1'] = ''
-
 # Loop through each row
 for index, row in df.iterrows():
     # Check if '[r]' is present in any of the specified columns
     if any('[r]' in str(value) for value in row[observation_columns].values):
+        # Insert 'Notes' column as the last column
+        df.insert(df.shape[1], 'Notes', '[r]')
+        
         # Update 'Notes' column with '[r]'
         df.at[index, 'Notes'] = '[r]'
         
@@ -69,6 +66,9 @@ for index, row in df.iterrows():
     
     # Check if '[x]' is present in any of the specified columns
     if any('[x]' in str(value) for value in row[observation_columns].values):
+        # Insert 'Notes1' column as the last column
+        df.insert(df.shape[1], 'Notes1', '[x]')
+        
         # Update 'Notes1' column with '[x]'
         df.at[index, 'Notes1'] = '[x]'
         
