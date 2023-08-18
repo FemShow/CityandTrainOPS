@@ -42,7 +42,7 @@ result_df = df.copy()
 
 # Function to insert a notes column
 def insert_notes_column(df, col_name):
-    notes_col_name = 'Notes'
+    notes_col_name = 'obsStatus'
     if notes_col_name in df.columns:
         count = 1
         while f"{notes_col_name}{count}" in df.columns:

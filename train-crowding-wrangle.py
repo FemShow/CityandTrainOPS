@@ -51,28 +51,24 @@ observation_columns = [
 
 # Loop through each row
 for index, row in df.iterrows():
-    # Check if '[r]' is present in any of the specified columns
-    if any('[r]' in str(value) for value in row[observation_columns].values):
-        # Insert 'Notes' column as the last column
-        df.insert(df.shape[1], 'Notes', '[r]')
-        
-        # Update 'Notes' column with '[r]'
-        df.at[index, 'Notes'] = '[r]'
-        
+    # Check if 'obsStats' column doesn't exist and '[r]' is present
+    if 'obsStats' not in df.columns and any('[r]' in str(value) for value in row[observation_columns].values):
+        # Insert 'obsStats' column as the last column
+        df.insert(df.shape[1], 'obsStats', '[r]')
+        # Update 'obsStats' column with '[r]'
+        df.at[index, 'obsStats'] = '[r]'
         # Remove '[r]' from other columns except 'Notes'
         for col in observation_columns:
             if '[r]' in str(row[col]):
                 row[col] = row[col].replace('[r]', '')
     
-    # Check if '[x]' is present in any of the specified columns
-    if any('[x]' in str(value) for value in row[observation_columns].values):
-        # Insert 'Notes1' column as the last column
-        df.insert(df.shape[1], 'Notes1', '[x]')
-        
-        # Update 'Notes1' column with '[x]'
-        df.at[index, 'Notes1'] = '[x]'
-        
-        # Remove '[x]' from other columns except 'Notes1'
+    # Check if 'obsStats1' column doesn't exist and '[x]' is present
+    if 'obsStats1' not in df.columns and any('[x]' in str(value) for value in row[observation_columns].values):
+        # Insert 'obsStats1' column as the last column
+        df.insert(df.shape[1], 'obsStats1', '[x]')
+        # Update 'obsStats1' column with '[x]'
+        df.at[index, 'obsStats1'] = '[x]'
+        # Remove '[x]' from other columns except 'obsStats1'
         for col in observation_columns:
             if '[x]' in str(row[col]):
                 row[col] = row[col].replace('[x]', '')
