@@ -1,0 +1,99 @@
+{
+  "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+  "title": "Peak crowding on a typical autumn weekday by city and train operator, annual from 2011",
+  "description": "Peak crowding on a typical autumn weekday by city and train operator, annual data from 2011",
+  "creator": "https://www.gov.uk/government/organisations/department-for-transport",
+  "publisher": "https://www.gov.uk/government/organisations/department-for-transport",
+  "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "keywords": ["trains", "overcrowding", "standing", "services", "arrivals"],
+  "templates": {
+    "observation-status": {
+      "type": "attribute",
+      "label": "Observation Status",
+      "description": "Indicates the observation status.",
+      "uri": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
+    },
+    "missing-value": {
+      "type": "attribute",
+      "label": "Missing Value",
+      "description": "Indicates a missing value.",
+      "uri": "http://purl.org/linked-data/sdmx/2009/attribute#no-obs"
+    }
+  },
+  "columns": {
+    "Year": {
+      "from_template": "government-year"
+    },
+    "City": false,
+    "ONS Code": {
+      "from_template": "statistical-geography"
+    },
+    "Train operator": false,
+    "AM peak arrivals (07:00-09:59): Number of services": {
+      "type": "observations",
+      "measure": {
+        "label": "Number of services",
+        "from_existing": "https://purl.org/csv-cubed/resources/count"
+      },
+      "data_type": "integer",
+      "unit": {
+        "label": "integer",
+        "from_existing": "http://qudt.org/vocab/unit/INT"
+      }
+    },
+    "AM peak arrivals (07:00-09:59): PIXC": {
+      "type": "observations"
+    },
+    "obsStatus": {
+      "from_template": "observation-status",
+      "describes_observations": "AM peak arrivals (07:00-09:59): PIXC",
+      "label": "[r]"
+    },
+    "AM peak arrivals (07:00-09:59): Passengers standing": {
+      "type": "observations"
+    },
+    "obsStatus1": {
+      "from_template": "observation-status",
+      "describes_observations": "AM peak arrivals (07:00-09:59): Passengers standing",
+      "label": "[r]"
+    },
+    "PM peak arrivals (16:00-18:59): Number of services": {
+      "type": "observations",
+      "measure": {
+        "label": "Number of services",
+        "from_existing": "https://purl.org/csv-cubed/resources/count"
+      },
+      "data_type": "integer",
+      "unit": {
+        "label": "integer",
+        "from_existing": "http://qudt.org/vocab/unit/INT"
+      }
+    },
+    "PM peak arrivals (16:00-18:59): PIXC": {
+      "type": "observations"
+    },
+    "obsStatu2": {
+      "from_template": "observation-status",
+      "describes_observations": "PM peak arrivals (16:00-18:59): PIXC",
+      "label": "[r]"
+    },
+    "obsStatu3": {
+      "from_template": "observation-status",
+      "describes_observations": "PM peak arrivals (16:00-18:59): PIXC",
+      "label": "[x]"
+    },
+    "PM peak arrivals (16:00-18:59): Passengers standing": {
+      "type": "observations"
+    },
+    "obsStatu4": {
+      "from_template": "observation-status",
+      "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing",
+      "label": "[r]"
+    },
+    "obsStatu5": {
+      "from_template": "observation-status",
+      "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing",
+      "label": "[x]"
+    }
+  }
+}
