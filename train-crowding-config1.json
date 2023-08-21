@@ -48,7 +48,7 @@
       "Notes1": {
         "from_template": "observation-status",
         "describes_observations": "AM peak arrivals (07:00-09:59): Passengers standing",
-        "data_type": "string",
+        "data_type": "integer",
         "unit": {
           "label": "[r]"
         }
