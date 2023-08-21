@@ -20,6 +20,19 @@
       "uri": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
     }
   },
+  "preprocessing": {
+    "replace_null_values": {
+      "transformations": [
+        {
+          "columns": ["Value"],
+          "transform": {
+            "replace": {"":9999999},
+            "default": 9999999
+          }
+        }
+      ]
+    }
+  },
   "columns": {
     "Year": {
       "from_template": "government-year"
@@ -28,65 +41,31 @@
     "ONS Code": {
       "from_template": "statistical-geography"
     },
-    "Train operator": false,
-    "AM peak arrivals (07:00-09:59): Number of services": {
+    "Train operator":false,
+    "Obs_Type": {
+      "type": "dimension"
+    },
+    "Value": {
       "type": "observations",
       "measure": {
-        "label": "Number of services",
-        "from_existing": "https://purl.org/csv-cubed/resources/count"
+        "label": "Number of services"
       },
-      "data_type": "integer",
+      "data_type": "decimal",
       "unit": {
-        "label": "integer",
-        "from_existing": "http://qudt.org/vocab/unit/INT"
+        "label": "decimal"
       }
+    }
     },
-    "AM peak arrivals (07:00-09:59): PIXC": {
-      "type": "observations"
-    },
-    "Notes": {
+    "obsStatus": {
       "from_template": "observation-status",
-      "describes_observations": "AM peak arrivals (07:00-09:59): PIXC",
-      "label": "[r]"
-    },
-    "AM peak arrivals (07:00-09:59): Passengers standing": {
-      "type": "observations"
-    },
-    "Notes1": {
-      "from_template": "observation-status",
-      "describes_observations": "AM peak arrivals (07:00-09:59): Passengers standing",
+      "describes_observations": "Value",
       "label": "[r]",
-      "description": "Due to the confidentiality of the passenger counts for individual services, figures are not shown in instances where they would be based on fewer than three services."
+      "description": "Value"
     },
-    "PM peak arrivals (16:00-18:59): PIXC": {
-      "type": "observations"
-    },
-    "Notes2": {
+    "obsStatus1": {
       "from_template": "observation-status",
-      "describes_observations": "PM peak arrivals (16:00-18:59): PIXC",
+      "describes_observations": "Value",
       "label": "[x]",
-      "description": "This information not provided."
-    },
-    "Notes3": {
-      "from_template": "observation-status",
-      "describes_observations": "PM peak arrivals (16:00-18:59): PIXC",
-      "label": "[r]",
-      "description": "Due to the confidentiality of the passenger counts for individual services, figures are not shown in instances where they would be based on fewer than three services."
-    },
-    "PM peak arrivals (16:00-18:59): Passengers standing": {
-      "type": "observations"
-    },
-    "Notes4": {
-      "from_template": "observation-status",
-      "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing",
-      "label": "[x]",
-      "description": "This information not provided."
-    },
-    "Notes5": {
-      "from_template": "observation-status",
-      "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing",
-      "label": "[r]",
-      "description": "Due to the confidentiality of the passenger counts for individual services, figures are not shown in instances where they would be based on fewer than three services."
+      "description": "Value"
     }
   }
-}

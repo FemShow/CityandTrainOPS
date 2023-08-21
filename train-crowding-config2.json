@@ -12,88 +12,88 @@
       "label": "Observation Status",
       "description": "Indicates the observation status.",
       "uri": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
-    },
-    "missing-value": {
-      "type": "attribute",
-      "label": "Missing Value",
-      "description": "Indicates a missing value.",
-      "uri": "http://purl.org/linked-data/sdmx/2009/attribute#no-obs"
     }
   },
   "columns": {
     "Year": {
       "from_template": "government-year"
     },
-    "City": false,
+    "City": {
+      "type": "dimension"
+    },
     "ONS Code": {
       "from_template": "statistical-geography"
     },
-    "Train operator": false,
+    "Train operator": {
+      "type": "dimension"
+    },
     "AM peak arrivals (07:00-09:59): Number of services": {
       "type": "observations",
       "measure": {
-        "label": "Number of services",
-        "from_existing": "https://purl.org/csv-cubed/resources/count"
+        "label": "Number of services"
       },
       "data_type": "integer",
       "unit": {
-        "label": "integer",
-        "from_existing": "http://qudt.org/vocab/unit/INT"
+        "label": "integer"
       }
     },
     "AM peak arrivals (07:00-09:59): PIXC": {
       "type": "observations"
     },
-    "obsStatus": {
-      "from_template": "observation-status",
-      "describes_observations": "AM peak arrivals (07:00-09:59): PIXC",
-      "label": "[r]"
-    },
+      "obsStatus": {
+        "from_template": "observation-status",
+        "description": "AM peak arrivals (07:00-09:59): PIXC",
+        "describes_observations": "AM peak arrivals (07:00-09:59): PIXC",
+        "label": "[r]"
+      },
     "AM peak arrivals (07:00-09:59): Passengers standing": {
       "type": "observations"
     },
-    "obsStatus1": {
-      "from_template": "observation-status",
-      "describes_observations": "AM peak arrivals (07:00-09:59): Passengers standing",
-      "label": "[r]"
-    },
+      "obsStatus1": {
+        "from_template": "observation-status",
+        "description": "AM peak arrivals (07:00-09:59): Passengers standing",
+        "describes_observations": "AM peak arrivals (07:00-09:59): Passengers standing",
+        "label": "[r]"
+      },
     "PM peak arrivals (16:00-18:59): Number of services": {
       "type": "observations",
       "measure": {
-        "label": "Number of services",
-        "from_existing": "https://purl.org/csv-cubed/resources/count"
+        "label": "PM peak arrivals (16:00-18:59): Number of services"
       },
       "data_type": "integer",
       "unit": {
-        "label": "integer",
-        "from_existing": "http://qudt.org/vocab/unit/INT"
+        "label": "integer"
       }
     },
     "PM peak arrivals (16:00-18:59): PIXC": {
       "type": "observations"
     },
-    "obsStatu2": {
-      "from_template": "observation-status",
-      "describes_observations": "PM peak arrivals (16:00-18:59): PIXC",
-      "label": "[r]"
-    },
-    "obsStatu3": {
-      "from_template": "observation-status",
-      "describes_observations": "PM peak arrivals (16:00-18:59): PIXC",
-      "label": "[x]"
-    },
+      "obsStatus2": {
+        "from_template": "observation-status",
+        "description": "PM peak arrivals (16:00-18:59): PIXC",
+        "describes_observations": "PM peak arrivals (16:00-18:59): PIXC",
+        "label": "[r]"
+      },
+      "obsStatus3": {
+        "from_template": "observation-status",
+        "description": "PM peak arrivals (16:00-18:59): PIXC",
+        "describes_observations": "PM peak arrivals (16:00-18:59): PIXC",
+        "label": "[x]"
+      },
     "PM peak arrivals (16:00-18:59): Passengers standing": {
       "type": "observations"
     },
-    "obsStatu4": {
-      "from_template": "observation-status",
-      "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing",
-      "label": "[r]"
-    },
-    "obsStatu5": {
-      "from_template": "observation-status",
-      "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing",
-      "label": "[x]"
+      "obsStatus4": {
+        "from_template": "observation-status",
+        "description": "PM peak arrivals (16:00-18:59): Passengers standing",
+        "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing",
+        "label": "[r]"
+      },
+      "obsStatus5": {
+        "from_template": "observation-status",
+        "description": "PM peak arrivals (16:00-18:59): Passengers standing",
+        "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing",
+        "label": "[x]"
     }
   }
 }
