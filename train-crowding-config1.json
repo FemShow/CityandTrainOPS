@@ -30,28 +30,33 @@
       "AM peak arrivals (07:00-09:59): Number of services": {
         "type": "observations",
         "measure": {
-          "label": "Number of services",
-          "from_existing": "https://purl.org/csv-cubed/resources/count"
+          "label": "Count of services",
+          "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
         },
         "data_type": "integer",
         "unit": {
-          "label": "integer",
-          "from_existing": "http://qudt.org/vocab/unit/INT"
+          "label": "number",
+          "from_existing": "http://qudt.org/vocab/unit/NUM"
         }
       },
       "AM peak arrivals (07:00-09:59): PIXC": {
-        "type": "attribute"
+        "type": "observations",
+        "data_type": "decimal",
+        "measure": {
+            "label": "Portion of people in excess of capacity",
+            "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+        },
+        "unit":{
+          "label": "Portion",
+          "from_existing":"http://qudt.org/vocab/unit/PERCENT"
+        }
       },
       "AM peak arrivals (07:00-09:59): Passengers standing": {
         "type": "observations"
       },
       "Notes1": {
         "from_template": "observation-status",
-        "describes_observations": "AM peak arrivals (07:00-09:59): Passengers standing",
-        "data_type": "integer",
-        "unit": {
-          "label": "[r]"
-        }
+        "describes_observations": "AM peak arrivals (07:00-09:59): Passengers standing"
       },
       "PM peak arrivals (16:00-18:59): Number of services": {
         "type": "observations",

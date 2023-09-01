@@ -15,22 +15,10 @@
   "templates": {
     "observation-status": {
       "type": "attribute",
-      "label": "Observation Status",
       "description": "Indicates the observation status.",
-      "uri": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
-    }
-  },
-  "preprocessing": {
-    "replace_null_values": {
-      "transformations": [
-        {
-          "columns": ["Value"],
-          "transform": {
-            "replace": {"":9999999},
-            "default": 9999999
-          }
-        }
-      ]
+      "uri": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus",
+      "label": "Observation Status",
+      "required": false
     }
   },
   "columns": {
@@ -41,31 +29,28 @@
     "ONS Code": {
       "from_template": "statistical-geography"
     },
-    "Train operator":false,
+    "Train operator": {
+      "type": "dimension"
+    },
     "Obs_Type": {
       "type": "dimension"
     },
     "Value": {
       "type": "observations",
       "measure": {
-        "label": "Number of services"
+        "label": "Peak crowding numbers",
+        "description": "AM & PM peak arrivals combined with figures of AM & PM People in excess of capacity.",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#scale"
       },
-      "data_type": "decimal",
+      "data_type": "integer",
       "unit": {
-        "label": "decimal"
+        "label": "Number",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
       }
-    }
     },
     "obsStatus": {
       "from_template": "observation-status",
-      "describes_observations": "Value",
-      "label": "[r]",
-      "description": "Value"
-    },
-    "obsStatus1": {
-      "from_template": "observation-status",
-      "describes_observations": "Value",
-      "label": "[x]",
-      "description": "Value"
+      "describes_observations": "Value"
     }
   }
+}

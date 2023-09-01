@@ -52,18 +52,26 @@ observation_columns = [
 # Melt the DataFrame
 df_melted = pd.melt(df, id_vars=['Year', 'City', 'ONS Code', 'Train operator'], value_vars=observation_columns, var_name='Obs_Type', value_name='Value')
 
-# Fill '[r]' and '[x]' values in 'obsStatus' and 'obsStatus1' columns, respectively
-df_melted['obsStatus'] = df_melted['Value'].apply(lambda x: '[r]' if x == '[r]' else '')
-df_melted['obsStatus1'] = df_melted['Value'].apply(lambda x: '[x]' if x == '[x]' else '')
+# Create a function to populate 'obsStatus' column
+def populate_obs_status(value):
+    if isinstance(value, str):
+        if '[r]' in value:
+            return 'r'
+        elif '[x]' in value:
+            return 'x'
+        else:
+            return ''
+    return ''
 
-# Replace '[r]', '[x]', and '[]' values with nulls/blanks in 'Value' column
+# Fill 'obsStatus' column
+df_melted['obsStatus'] = df_melted['Value'].apply(populate_obs_status)
+
+# Replace '[r]', '[x]', and '[]' values with empty strings in 'Value' column
 df_melted['Value'] = df_melted['Value'].replace({'\[r\]': '', '\[x\]': '', '\[\]': ''}, regex=True)
 
-# Make case-insensitive replacements for 'C2C' and 'MerseyRail'
-# df_melted['Value'] = df_melted['Value'].replace({'C2C': 'C2C', 'c2c': 'C2C', 'MerseyRail': 'MerseyRail', 'Merseyrail': 'MerseyRail'})
-
-# Make case-insensitive replacements for 'C2C' and 'MerseyRail' in 'Train operator' column
-df_melted['Train operator'] = df_melted['Train operator'].replace({'C2C': 'C2C', 'c2c': 'C2C', 'MerseyRail': 'MerseyRail', 'Merseyrail': 'MerseyRail'}, regex=True)
+# Remove '[note 1]', '[note 2]', '[note 3]', '[note 4]', '[note 5]' from 'Train operator' and 'Obs_Type' columns
+df_melted['Train operator'] = df_melted['Train operator'].str.replace(r'\[note [1-5]\]', '', regex=True)
+df_melted['Obs_Type'] = df_melted['Obs_Type'].str.replace(r'\[note [1-5]\]', '', regex=True)
 
 # Save the melted DataFrame as CSV
 result_file_melted = "result_melted.csv"

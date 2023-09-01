@@ -49,35 +49,32 @@ observation_columns = [
     'PM peak arrivals (16:00-18:59): Passengers standing [note 1]'
 ]
 
-# Loop through each row
-for index, row in df.iterrows():
-    # Check if 'obsStats' column doesn't exist and '[r]' is present
-    if 'obsStats' not in df.columns and any('[r]' in str(value) for value in row[observation_columns].values):
-        # Insert 'obsStats' column as the last column
-        df.insert(df.shape[1], 'obsStats', '[r]')
-        # Update 'obsStats' column with '[r]'
-        df.at[index, 'obsStats'] = '[r]'
-        # Remove '[r]' from other columns except 'Notes'
-        for col in observation_columns:
-            if '[r]' in str(row[col]):
-                row[col] = row[col].replace('[r]', '')
-    
-    # Check if 'obsStats1' column doesn't exist and '[x]' is present
-    if 'obsStats1' not in df.columns and any('[x]' in str(value) for value in row[observation_columns].values):
-        # Insert 'obsStats1' column as the last column
-        df.insert(df.shape[1], 'obsStats1', '[x]')
-        # Update 'obsStats1' column with '[x]'
-        df.at[index, 'obsStats1'] = '[x]'
-        # Remove '[x]' from other columns except 'obsStats1'
-        for col in observation_columns:
-            if '[x]' in str(row[col]):
-                row[col] = row[col].replace('[x]', '')
+# Melt the DataFrame
+df_melted = pd.melt(df, id_vars=['Year', 'City', 'ONS Code', 'Train operator'], value_vars=observation_columns, var_name='Obs_Type', value_name='Value')
 
-# Remove '[note 1]' from column headers
-df.columns = df.columns.str.replace(r'\[note 1\]', '', regex=True)
+# Create a function to populate 'obsStatus' column
+def populate_obs_status(value):
+    if isinstance(value, str):
+        if '[r]' in value:
+            return '[r]'
+        elif '[x]' in value:
+            return '[x]'
+        else:
+            return ''
+    return ''
 
-# Save the resulting dataset as CSV
-result_file = "result.csv"
-df.to_csv(result_file, index=False)
+# Fill 'obsStatus' column
+df_melted['obsStatus'] = df_melted['Value'].apply(populate_obs_status)
 
-print("Dataset saved as", result_file)
+# Replace '[r]', '[x]', and '[]' values with empty strings in 'Value' column
+df_melted['Value'] = df_melted['Value'].replace({'\[r\]': '', '\[x\]': '', '\[\]': ''}, regex=True)
+
+# Remove '[note 1]', '[note 2]', '[note 3]', '[note 4]', '[note 5]' from 'Train operator' and 'Obs_Type' columns
+df_melted['Train operator'] = df_melted['Train operator'].str.replace(r'\[note [1-5]\]', '', regex=True)
+df_melted['Obs_Type'] = df_melted['Obs_Type'].str.replace(r'\[note [1-5]\]', '', regex=True)
+
+# Save the melted DataFrame as CSV
+result_file_melted = "result_melted.csv"
+df_melted.to_csv(result_file_melted, index=False)
+
+print("Melted dataset saved as", result_file_melted)
