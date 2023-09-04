@@ -12,15 +12,6 @@
     "services",
     "arrivals"
   ],
-  "templates": {
-    "observation-status": {
-      "type": "attribute",
-      "description": "Indicates the observation status.",
-      "uri": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus",
-      "label": "Observation Status",
-      "required": false
-    }
-  },
   "columns": {
     "Year": {
       "from_template": "government-year"

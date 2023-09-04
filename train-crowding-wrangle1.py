@@ -40,63 +40,39 @@ df.loc[df['City'] == 'London', 'ONS Code'] = 'E12000007'
 # Create a new DataFrame to hold the result
 result_df = df.copy()
 
-# Function to insert a notes column
-def insert_notes_column(df, col_name):
-    notes_col_name = 'obsStatus'
-    if notes_col_name in df.columns:
-        count = 1
-        while f"{notes_col_name}{count}" in df.columns:
-            count += 1
-        notes_col_name = f"{notes_col_name}{count}"
-    df.insert(df.columns.get_loc(col_name) + 1, notes_col_name, '')
-    return notes_col_name
+# Function to insert and populate obsStatus columns
+def insert_and_populate_obsStatus_column(df, col_name):
+    obsStatus_col_name = 'obsStatus'
+    count = 0
+    while obsStatus_col_name in df.columns:
+        count += 1
+        obsStatus_col_name = f'obsStatus{count}'
+    df.insert(df.columns.get_loc(col_name) + 1, obsStatus_col_name, None)  # Use None for missing values
+    
+    # Loop through each row and populate obsStatus column
+    for index, row in df.iterrows():
+        if '[r]' in str(row[col_name]):
+            row[obsStatus_col_name] = 'r'
+            row[col_name] = row[col_name].replace('[r]', '')
+        elif '[x]' in str(row[col_name]):
+            row[obsStatus_col_name] = 'x'
+            row[col_name] = row[col_name].replace('[x]', '')
 
-# Insert a notes column after 'AM peak arrivals (07:00-09:59): PIXC [note 1]'
-pixc_notes_col = insert_notes_column(result_df, 'AM peak arrivals (07:00-09:59): PIXC [note 1]')
+# Columns to insert obsStatus columns after
+columns_to_process = [
+    'AM peak arrivals (07:00-09:59): PIXC [note 1]',
+    'AM peak arrivals (07:00-09:59): Passengers standing [note 1]',
+    'PM peak arrivals (16:00-18:59): Number of services',
+    'PM peak arrivals (16:00-18:59): PIXC [note 1]',
+    'PM peak arrivals (16:00-18:59): Passengers standing [note 1]'
+]
 
-# Insert a notes column after 'AM peak arrivals (07:00-09:59): Passengers standing [note 1]'
-standing_notes_col = insert_notes_column(result_df, 'AM peak arrivals (07:00-09:59): Passengers standing [note 1]')
+# Process each specified column
+for col_name in columns_to_process:
+    insert_and_populate_obsStatus_column(result_df, col_name)
 
-# Insert a notes column after 'PM peak arrivals (16:00-18:59): PIXC [note 1]'
-peak_arrivals_col = insert_notes_column(result_df, 'PM peak arrivals (16:00-18:59): PIXC [note 1]')
-
-# Insert a notes column after 'PM peak arrivals (16:00-18:59): PIXC [note 1]'
-peak_arrivals1_col = insert_notes_column(result_df, 'PM peak arrivals (16:00-18:59): PIXC [note 1]')
-
-# Insert a notes column after 'PM peak arrivals (16:00-18:59): Passengers standing [note 1]'
-stand_notes_col = insert_notes_column(result_df, 'PM peak arrivals (16:00-18:59): Passengers standing [note 1]')
-
-# Insert a notes column after 'PM peak arrivals (16:00-18:59): Passengers standing [note 1]'
-stand_notes1_col = insert_notes_column(result_df, 'PM peak arrivals (16:00-18:59): Passengers standing [note 1]')
-
-# Loop through each row
-for index, row in result_df.iterrows():
-    if '[r]' in str(row['AM peak arrivals (07:00-09:59): PIXC [note 1]']):
-        result_df.at[index, pixc_notes_col] = '[r]'
-        row['AM peak arrivals (07:00-09:59): PIXC [note 1]'] = row['AM peak arrivals (07:00-09:59): PIXC [note 1]'].replace('[r]', '')
-
-    if '[r]' in str(row['AM peak arrivals (07:00-09:59): Passengers standing [note 1]']):
-        result_df.at[index, standing_notes_col] = '[r]'
-        row['AM peak arrivals (07:00-09:59): Passengers standing [note 1]'] = row['AM peak arrivals (07:00-09:59): Passengers standing [note 1]'].replace('[r]', '')
-
-    if '[x]' in str(row['PM peak arrivals (16:00-18:59): PIXC [note 1]']):
-        result_df.at[index, peak_arrivals_col] = '[x]'
-        row['PM peak arrivals (16:00-18:59): PIXC [note 1]'] = row['PM peak arrivals (16:00-18:59): PIXC [note 1]'].replace('[x]', '')
-
-    if '[r]' in str(row['PM peak arrivals (16:00-18:59): PIXC [note 1]']):
-        result_df.at[index, peak_arrivals1_col] = '[r]'
-        row['PM peak arrivals (16:00-18:59): PIXC [note 1]'] = row['PM peak arrivals (16:00-18:59): PIXC [note 1]'].replace('[r]', '')
-
-    if '[x]' in str(row['PM peak arrivals (16:00-18:59): Passengers standing [note 1]']):
-        result_df.at[index, stand_notes_col] = '[x]'
-        row['PM peak arrivals (16:00-18:59): Passengers standing [note 1]'] = row['PM peak arrivals (16:00-18:59): Passengers standing [note 1]'].replace('[x]', '')
-
-    if '[r]' in str(row['PM peak arrivals (16:00-18:59): Passengers standing [note 1]']):
-        result_df.at[index, stand_notes1_col] = '[r]'
-        row['PM peak arrivals (16:00-18:59): Passengers standing [note 1]'] = row['PM peak arrivals (16:00-18:59): Passengers standing [note 1]'].replace('[r]', '')
-
-# Remove '[note 1]' from column headers
-result_df.columns = result_df.columns.str.replace(r'\[note 1\]', '', regex=True)
+# Remove '[note 1]' from column headers and strip trailing spaces
+result_df.columns = result_df.columns.str.replace(r'\[note 1\]', '', regex=True).str.strip()
 
 # Save the resulting dataset as CSV
 result_file = "result.csv"

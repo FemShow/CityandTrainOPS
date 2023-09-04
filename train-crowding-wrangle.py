@@ -66,8 +66,8 @@ def populate_obs_status(value):
 # Fill 'obsStatus' column
 df_melted['obsStatus'] = df_melted['Value'].apply(populate_obs_status)
 
-# Replace '[r]', '[x]', and '[]' values with empty strings in 'Value' column
-df_melted['Value'] = df_melted['Value'].replace({'\[r\]': '', '\[x\]': '', '\[\]': ''}, regex=True)
+# Replace '[r]', '[x]', and '[]' values with None in 'Value' column
+df_melted['Value'] = df_melted['Value'].replace({'\[r\]': None, '\[x\]': None, '\[\]': None}, regex=True)
 
 # Remove '[note 1]', '[note 2]', '[note 3]', '[note 4]', '[note 5]' from 'Train operator' and 'Obs_Type' columns
 df_melted['Train operator'] = df_melted['Train operator'].str.replace(r'\[note [1-5]\]', '', regex=True)
