@@ -47,7 +47,7 @@ def insert_and_populate_obsStatus_column(df, col_name):
     while obsStatus_col_name in df.columns:
         count += 1
         obsStatus_col_name = f'obsStatus{count}'
-    df.insert(df.columns.get_loc(col_name) + 1, obsStatus_col_name, None)  # Use None for missing values
+    df.insert(df.columns.get_loc(col_name) + 1, obsStatus_col_name, '')  # Use None for missing values
     
     # Loop through each row and populate obsStatus column
     for index, row in df.iterrows():

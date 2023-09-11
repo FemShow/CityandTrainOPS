@@ -1,0 +1,1659 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dataset",
+    "tables": [
+        {
+            "url": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "titles": "Year",
+                        "name": "year",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}",
+                        "required": true
+                    },
+                    {
+                        "titles": "City",
+                        "name": "city",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}",
+                        "required": true
+                    },
+                    {
+                        "titles": "ONS Code",
+                        "name": "ons_code",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Train operator",
+                        "name": "train_operator",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator",
+                        "valueUrl": "train-operator.csv#{+train_operator}",
+                        "required": true
+                    },
+                    {
+                        "titles": "AM peak arrivals (07:00-09:59): Number of services",
+                        "name": "am_peak_arrivals_07_00_09_59_number_of_services",
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@count-of-services-arrving-during-am-peak",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/count-of-services-arrving-during-am-peak",
+                        "datatype": "integer",
+                        "required": false
+                    },
+                    {
+                        "titles": "AM peak arrivals (07:00-09:59): PIXC",
+                        "name": "am_peak_arrivals_07_00_09_59_pixc",
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-pixc",
+                        "datatype": "decimal",
+                        "required": false
+                    },
+                    {
+                        "titles": "obsStatus",
+                        "name": "obsstatus",
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/{+obsstatus}",
+                        "required": false
+                    },
+                    {
+                        "titles": "AM peak arrivals (07:00-09:59): Passengers standing",
+                        "name": "am_peak_arrivals_07_00_09_59_passengers_standing",
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-passengers-standing",
+                        "datatype": "decimal",
+                        "required": false
+                    },
+                    {
+                        "titles": "obsStatus1",
+                        "name": "obsstatus1",
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/{+obsstatus1}",
+                        "required": false
+                    },
+                    {
+                        "titles": "PM peak arrivals (16:00-18:59): Number of services",
+                        "name": "pm_peak_arrivals_16_00_18_59_number_of_services",
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-number-of-services",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-number-of-services",
+                        "datatype": "integer",
+                        "required": false
+                    },
+                    {
+                        "titles": "obsStatus2",
+                        "name": "obsstatus2",
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-number-of-services",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/{+obsstatus2}",
+                        "required": false
+                    },
+                    {
+                        "titles": "PM peak arrivals (16:00-18:59): PIXC",
+                        "name": "pm_peak_arrivals_16_00_18_59_pixc",
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-pixc",
+                        "datatype": "decimal",
+                        "required": false
+                    },
+                    {
+                        "titles": "obsStatus3",
+                        "name": "obsstatus3",
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/{+obsstatus3}",
+                        "required": false
+                    },
+                    {
+                        "titles": "PM peak arrivals (16:00-18:59): Passengers standing",
+                        "name": "pm_peak_arrivals_16_00_18_59_passengers_standing",
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-passengers-standing",
+                        "datatype": "decimal",
+                        "required": false
+                    },
+                    {
+                        "titles": "obsStatus4",
+                        "name": "obsstatus4",
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/{+obsstatus4}",
+                        "required": false
+                    },
+                    {
+                        "name": "virt_slice",
+                        "virtual": true,
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Slice"
+                    },
+                    {
+                        "name": "virt_slice_structure",
+                        "virtual": true,
+                        "propertyUrl": "qb:sliceStructure",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#slice/cross-measures"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_number_of_services",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@count-of-services-arrving-during-am-peak"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_number_of_services_meas",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@count-of-services-arrving-during-am-peak",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/count-of-services-arrving-during-am-peak"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_number_of_services_unit",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@count-of-services-arrving-during-am-peak",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_number_of_services_year",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@count-of-services-arrving-during-am-peak",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_number_of_services_city",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@count-of-services-arrving-during-am-peak",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_number_of_services_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@count-of-services-arrving-during-am-peak",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_number_of_services_train_operator",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@count-of-services-arrving-during-am-peak",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator",
+                        "valueUrl": "train-operator.csv#{+train_operator}"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_number_of_services_type",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@count-of-services-arrving-during-am-peak",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_am_peak_arrivals_07_00_09_59_number_of_services",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@count-of-services-arrving-during-am-peak",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_pixc",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-pixc"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_pixc_meas",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-pixc",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-pixc"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_pixc_unit",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-pixc",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_pixc_year",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_pixc_city",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_pixc_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_pixc_train_operator",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator",
+                        "valueUrl": "train-operator.csv#{+train_operator}"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_pixc_type",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-pixc",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_am_peak_arrivals_07_00_09_59_pixc",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-pixc",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_passengers_standing",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-passengers-standing"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_passengers_standing_meas",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-passengers-standing",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-passengers-standing"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_passengers_standing_unit",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-passengers-standing",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_passengers_standing_year",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_passengers_standing_city",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_passengers_standing_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_am_peak_arrivals_07_00_09_59_passengers_standing_train_operator",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator",
+                        "valueUrl": "train-operator.csv#{+train_operator}"
+                    },
+                    {
+                        "name": "virt_obs_am_peak_arrivals_07_00_09_59_passengers_standing_type",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-passengers-standing",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_am_peak_arrivals_07_00_09_59_passengers_standing",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@am-peak-arrivals-07-00-09-59-passengers-standing",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_number_of_services",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-number-of-services"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_number_of_services_meas",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-number-of-services",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-number-of-services"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_number_of_services_unit",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-number-of-services",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_number_of_services_year",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-number-of-services",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_number_of_services_city",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-number-of-services",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_number_of_services_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-number-of-services",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_number_of_services_train_operator",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-number-of-services",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator",
+                        "valueUrl": "train-operator.csv#{+train_operator}"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_number_of_services_type",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-number-of-services",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_pm_peak_arrivals_16_00_18_59_number_of_services",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-number-of-services",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_pixc",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-pixc"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_pixc_meas",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-pixc",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-pixc"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_pixc_unit",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-pixc",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_pixc_year",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_pixc_city",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_pixc_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_pixc_train_operator",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-pixc",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator",
+                        "valueUrl": "train-operator.csv#{+train_operator}"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_pixc_type",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-pixc",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_pm_peak_arrivals_16_00_18_59_pixc",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-pixc",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_passengers_standing",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-passengers-standing"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_passengers_standing_meas",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-passengers-standing",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-passengers-standing"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_passengers_standing_unit",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-passengers-standing",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_passengers_standing_year",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_passengers_standing_city",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_passengers_standing_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_pm_peak_arrivals_16_00_18_59_passengers_standing_train_operator",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-passengers-standing",
+                        "propertyUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator",
+                        "valueUrl": "train-operator.csv#{+train_operator}"
+                    },
+                    {
+                        "name": "virt_obs_pm_peak_arrivals_16_00_18_59_passengers_standing_type",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-passengers-standing",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_pm_peak_arrivals_16_00_18_59_passengers_standing",
+                        "virtual": true,
+                        "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#obs/{year},{city},{ons_code},{train_operator}@pm-peak-arrivals-16-00-18-59-passengers-standing",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dataset"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "year",
+                        "reference": {
+                            "resource": "government-year.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    },
+                    {
+                        "columnReference": "city",
+                        "reference": {
+                            "resource": "city.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    },
+                    {
+                        "columnReference": "train_operator",
+                        "reference": {
+                            "resource": "train-operator.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "year",
+                    "city",
+                    "ons_code",
+                    "train_operator"
+                ],
+                "aboutUrl": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#slice/{year},{city},{ons_code},{train_operator}"
+            }
+        },
+        {
+            "url": "government-year.csv",
+            "tableSchema": "government-year.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "city.csv",
+            "tableSchema": "city.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "train-operator.csv",
+            "tableSchema": "train-operator.table.json",
+            "suppressOutput": true
+        }
+    ],
+    "rdfs:seeAlso": [
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-passengers-standing",
+            "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "PM peak arrivals (16:00-18:59): Passengers standing"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/statistical-geography",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#AttributeProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Observation Status"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#class/train-operator",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-pixc",
+            "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Percentage of passengers in excess of capacity during PM peak arrivals"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "PM peak arrivals (16:00-18:59): PIXC"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#portion-of-population"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#structure",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#DataStructureDefinition",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/statistical-geography"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/observation-status"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/measure-type"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/count-of-services-arrving-during-am-peak"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/train-operator"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/pm-peak-arrivals-16-00-18-59-number-of-services"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/pm-peak-arrivals-16-00-18-59-passengers-standing"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/government-year"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/unit"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/pm-peak-arrivals-16-00-18-59-pixc"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/am-peak-arrivals-07-00-09-59-passengers-standing"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/city"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/am-peak-arrivals-07-00-09-59-pixc"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-passengers-standing"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-passengers-standing"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-number-of-services"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/count-of-services-arrving-during-am-peak"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-pixc"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-pixc"
+                }
+            ],
+            "http://purl.org/linked-data/cube#sliceKey": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#slice/cross-measures"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#class/city",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-pixc",
+            "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Percentage of passengers in excess of capacity during AM peak arrivals"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "AM peak arrivals (07:00-09:59):PIXC"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#portion-of-population"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/train-operator",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dataset",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://purl.org/linked-data/cube#DataSet"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-transport"
+                }
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "Peak crowding on a typical autumn weekday by city and train operator, annual data from 2011"
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Peak crowding on a typical autumn weekday by city and train operator, annual from 2011"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-08T13:32:22.137425"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-08T13:32:22.137425"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-transport"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Peak crowding on a typical autumn weekday by city and train operator, annual from 2011"
+                }
+            ],
+            "http://purl.org/linked-data/cube#structure": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#structure"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Peak crowding on a typical autumn weekday by city and train operator, annual from 2011"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "standing"
+                },
+                {
+                    "@language": "en",
+                    "@value": "trains"
+                },
+                {
+                    "@language": "en",
+                    "@value": "arrivals"
+                },
+                {
+                    "@language": "en",
+                    "@value": "services"
+                },
+                {
+                    "@language": "en",
+                    "@value": "overcrowding"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/pm-peak-arrivals-16-00-18-59-number-of-services",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-number-of-services"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-number-of-services"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 15
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#class/statistical-geography",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/am-peak-arrivals-07-00-09-59-passengers-standing",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-passengers-standing"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-passengers-standing"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 12
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.4.4"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/am-peak-arrivals-07-00-09-59-pixc",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-pixc"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-pixc"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 9
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/pm-peak-arrivals-16-00-18-59-pixc",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-pixc"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-pixc"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 18
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/am-peak-arrivals-07-00-09-59-passengers-standing",
+            "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Passengers standing during AM peak arrivals"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "AM peak arrivals (07:00-09:59): Passengers standing"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#passengers"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography",
+            "@type": [
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Statistical Geography"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#class/statistical-geography"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refArea"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year",
+            "@type": [
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "government-year.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Government Year"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#class/government-year"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/unit",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 6
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/observation-status",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": false
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 10
+                },
+                {
+                    "@value": 22
+                },
+                {
+                    "@value": 16
+                },
+                {
+                    "@value": 19
+                },
+                {
+                    "@value": 13
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator",
+            "@type": [
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "train-operator.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Train operator"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#class/train-operator"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/measure-type",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 20
+                },
+                {
+                    "@value": 5
+                },
+                {
+                    "@value": 17
+                },
+                {
+                    "@value": 14
+                },
+                {
+                    "@value": 11
+                },
+                {
+                    "@value": 8
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/city",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 2
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/government-year",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city",
+            "@type": [
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "city.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "City"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#class/city"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-number-of-services",
+            "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "PM peak arrivals is defined as 16:00-18:59."
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "PM peak arrivals (16:00-18:59): Number of services"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/pm-peak-arrivals-16-00-18-59-passengers-standing",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-passengers-standing"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/pm-peak-arrivals-16-00-18-59-passengers-standing"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 21
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#slice/cross-measures",
+            "@type": [
+                "http://purl.org/linked-data/cube#SliceKey",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/train-operator"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/city"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/statistical-geography"
+                },
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dimension/government-year"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#class/government-year",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/count-of-services-arrving-during-am-peak",
+            "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "AM peak arrivals is defined as 07:00-09:59."
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Count of Services arrving during AM Peak"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#component/count-of-services-arrving-during-am-peak",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/count-of-services-arrving-during-am-peak"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#measure/count-of-services-arrving-during-am-peak"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 7
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dependency/government-year",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./government-year.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "government-year.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dependency/city",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./city.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "city.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#dependency/train-operator",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./train-operator.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "train-operator.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/r",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "r"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/r",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "r"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/x",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "x"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/r",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "r"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/x",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "x"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/r",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "r"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#attribute/observation-status/x",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "x"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#unit/percentage",
+            "@type": [
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://qudt.org/schema/qudt/isScalingOf": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/PERCENT"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasFactor": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#float",
+                    "@value": "1.0"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/PERCENT"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/PERCENT"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "percentage"
+                }
+            ]
+        },
+        {
+            "@id": "peak-crowding-on-a-typical-autumn-weekday-by-city-and-train-operator-annual-from-2011.csv#unit/number",
+            "@type": [
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://qudt.org/schema/qudt/isScalingOf": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasFactor": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#float",
+                    "@value": "1.0"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Number"
+                }
+            ]
+        }
+    ]
+}

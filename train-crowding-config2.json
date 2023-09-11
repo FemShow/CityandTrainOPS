@@ -62,65 +62,65 @@
         "description": "Passengers standing during AM peak arrivals",
         "from_existing": "https://purl.org/csv-cubed/resources/measures#passengers"
       },
+      "data_type": "decimal",
+      "unit": {
+        "label": "percentage",
+        "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+      }
+    },
+    "obsStatus1": {
+      "from_template": "observation-status",
+      "describes_observations": "AM peak arrivals (07:00-09:59): Passengers standing"
+    },
+    "PM peak arrivals (16:00-18:59): Number of services": {
+      "type": "observations",
+      "measure": {
+        "label": "PM peak arrivals (16:00-18:59): Number of services",
+        "description": "PM peak arrivals is defined as 16:00-18:59.",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+      },
       "data_type": "integer",
       "unit": {
         "label": "Number",
         "from_existing": "http://qudt.org/vocab/unit/NUM"
       }
-    }
-  },
-  "obsStatus1": {
-    "from_template": "observation-status",
-    "describes_observations": "AM peak arrivals (07:00-09:59): Passengers standing"
-  },
-  "PM peak arrivals (16:00-18:59): Number of services": {
-    "type": "observations",
-    "measure": {
-      "label": "PM peak arrivals (16:00-18:59): Number of services",
-      "description": "PM peak arrivals is defined as 16:00-18:59.",
-      "from_existing":"https://purl.org/csv-cubed/resources/measures#Count"
     },
-    "data_type": "integer",
-    "unit": {
-      "label": "Number",
-      "from_existing": "http://qudt.org/vocab/unit/NUM"
-    }
-  },
-  "obsStatus2": {
-    "from_template": "observation-status",
-    "describes_observations": "PM peak arrivals (16:00-18:59): Number of services"
-  },
-  "PM peak arrivals (16:00-18:59): PIXC": {
-    "type": "observations",
-    "measure": {
-      "label": "PM peak arrivals (16:00-18:59): PIXC",
-      "description": "Percentage of passengers in excess of capacity during PM peak arrivals",
-      "from_existing":"https://purl.org/csv-cubed/resources/measures#portion-of-population"
+    "obsStatus2": {
+      "from_template": "observation-status",
+      "describes_observations": "PM peak arrivals (16:00-18:59): Number of services"
     },
-    "data_type": "decimal",
-    "unit": {
-      "label": "percentage",
-      "from_existing": "http://qudt.org/vocab/unit/PERCENT"
-    }
-  },
-  "obsStatus3": {
-    "from_template": "observation-status",
-    "describes_observations": "PM peak arrivals (16:00-18:59): PIXC"
-  },
-  "PM peak arrivals (16:00-18:59): Passengers standing": {
-    "type": "observations",
-    "measure": {
-      "label": "PM peak arrivals (16:00-18:59): Passengers standing",
-      "from_existing":"https://purl.org/csv-cubed/resources/measures#Count"
+    "PM peak arrivals (16:00-18:59): PIXC": {
+      "type": "observations",
+      "measure": {
+        "label": "PM peak arrivals (16:00-18:59): PIXC",
+        "description": "Percentage of passengers in excess of capacity during PM peak arrivals",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#portion-of-population"
+      },
+      "data_type": "decimal",
+      "unit": {
+        "label": "percentage",
+        "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+      }
     },
-    "data_type": "integer",
-    "unit": {
-      "label": "Number",
-      "from_existing": "http://qudt.org/vocab/unit/NUM"
+    "obsStatus3": {
+      "from_template": "observation-status",
+      "describes_observations": "PM peak arrivals (16:00-18:59): PIXC"
+    },
+    "PM peak arrivals (16:00-18:59): Passengers standing": {
+      "type": "observations",
+      "measure": {
+        "label": "PM peak arrivals (16:00-18:59): Passengers standing",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+      },
+      "data_type": "decimal",
+      "unit": {
+        "label": "percentage",
+        "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+      }
+    },
+    "obsStatus4": {
+      "from_template": "observation-status",
+      "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing"
     }
-  },
-  "obsStatus4": {
-    "from_template": "observation-status",
-    "describes_observations": "PM peak arrivals (16:00-18:59): Passengers standing"
   }
 }
