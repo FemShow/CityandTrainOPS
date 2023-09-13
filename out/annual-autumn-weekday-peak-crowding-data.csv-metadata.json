@@ -1,0 +1,1659 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dataset",
+    "tables": [
+        {
+            "url": "annual-autumn-weekday-peak-crowding-data.csv",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "titles": "Year",
+                        "name": "year",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}",
+                        "required": true
+                    },
+                    {
+                        "titles": "City",
+                        "name": "city",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}",
+                        "required": true
+                    },
+                    {
+                        "titles": "ONS_Code",
+                        "name": "ons_code",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Trn_Op",
+                        "name": "trn_op",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op",
+                        "valueUrl": "trn_op.csv#{+trn_op}",
+                        "required": true
+                    },
+                    {
+                        "titles": "AM_Num",
+                        "name": "am_num",
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_peak_num",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_peak_num",
+                        "datatype": "integer",
+                        "required": false
+                    },
+                    {
+                        "titles": "AM_PIXC",
+                        "name": "am_pixc",
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_pixc",
+                        "datatype": "decimal",
+                        "required": false
+                    },
+                    {
+                        "titles": "obsStatus",
+                        "name": "obsstatus",
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/{+obsstatus}",
+                        "required": false
+                    },
+                    {
+                        "titles": "AM_stand",
+                        "name": "am_stand",
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_standing",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_standing",
+                        "datatype": "decimal",
+                        "required": false
+                    },
+                    {
+                        "titles": "obsStatus1",
+                        "name": "obsstatus1",
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_standing",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/{+obsstatus1}",
+                        "required": false
+                    },
+                    {
+                        "titles": "PM_Num",
+                        "name": "pm_num",
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_num",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_num",
+                        "datatype": "integer",
+                        "required": false
+                    },
+                    {
+                        "titles": "obsStatus2",
+                        "name": "obsstatus2",
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_num",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/{+obsstatus2}",
+                        "required": false
+                    },
+                    {
+                        "titles": "PM_PIXC",
+                        "name": "pm_pixc",
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_pixc",
+                        "datatype": "decimal",
+                        "required": false
+                    },
+                    {
+                        "titles": "obsStatus3",
+                        "name": "obsstatus3",
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/{+obsstatus3}",
+                        "required": false
+                    },
+                    {
+                        "titles": "PM_stand",
+                        "name": "pm_stand",
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_stand",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_stand",
+                        "datatype": "decimal",
+                        "required": false
+                    },
+                    {
+                        "titles": "obsStatus4",
+                        "name": "obsstatus4",
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_stand",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/{+obsstatus4}",
+                        "required": false
+                    },
+                    {
+                        "name": "virt_slice",
+                        "virtual": true,
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Slice"
+                    },
+                    {
+                        "name": "virt_slice_structure",
+                        "virtual": true,
+                        "propertyUrl": "qb:sliceStructure",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#slice/cross-measures"
+                    },
+                    {
+                        "name": "virt_obs_am_num",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_peak_num"
+                    },
+                    {
+                        "name": "virt_obs_am_num_meas",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_peak_num",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_peak_num"
+                    },
+                    {
+                        "name": "virt_obs_am_num_unit",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_peak_num",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_am_num_year",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_peak_num",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_am_num_city",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_peak_num",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_am_num_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_peak_num",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_am_num_trn_op",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_peak_num",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op",
+                        "valueUrl": "trn_op.csv#{+trn_op}"
+                    },
+                    {
+                        "name": "virt_obs_am_num_type",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_peak_num",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_am_num",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_peak_num",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_am_pixc",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_pixc"
+                    },
+                    {
+                        "name": "virt_obs_am_pixc_meas",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_pixc",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_pixc"
+                    },
+                    {
+                        "name": "virt_obs_am_pixc_unit",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_pixc",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_am_pixc_year",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_am_pixc_city",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_am_pixc_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_am_pixc_trn_op",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op",
+                        "valueUrl": "trn_op.csv#{+trn_op}"
+                    },
+                    {
+                        "name": "virt_obs_am_pixc_type",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_pixc",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_am_pixc",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_pixc",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_am_stand",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_standing"
+                    },
+                    {
+                        "name": "virt_obs_am_stand_meas",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_standing",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_standing"
+                    },
+                    {
+                        "name": "virt_obs_am_stand_unit",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_standing",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_am_stand_year",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_standing",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_am_stand_city",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_standing",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_am_stand_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_standing",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_am_stand_trn_op",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_standing",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op",
+                        "valueUrl": "trn_op.csv#{+trn_op}"
+                    },
+                    {
+                        "name": "virt_obs_am_stand_type",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_standing",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_am_stand",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@am_standing",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_pm_num",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_num"
+                    },
+                    {
+                        "name": "virt_obs_pm_num_meas",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_num",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_num"
+                    },
+                    {
+                        "name": "virt_obs_pm_num_unit",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_num",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_pm_num_year",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_num",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_pm_num_city",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_num",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_pm_num_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_num",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_pm_num_trn_op",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_num",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op",
+                        "valueUrl": "trn_op.csv#{+trn_op}"
+                    },
+                    {
+                        "name": "virt_obs_pm_num_type",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_num",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_pm_num",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_num",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_pm_pixc",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_pixc"
+                    },
+                    {
+                        "name": "virt_obs_pm_pixc_meas",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_pixc",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_pixc"
+                    },
+                    {
+                        "name": "virt_obs_pm_pixc_unit",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_pixc",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_pm_pixc_year",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_pm_pixc_city",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_pm_pixc_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_pm_pixc_trn_op",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_pixc",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op",
+                        "valueUrl": "trn_op.csv#{+trn_op}"
+                    },
+                    {
+                        "name": "virt_obs_pm_pixc_type",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_pixc",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_pm_pixc",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_pixc",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_pm_stand",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_stand"
+                    },
+                    {
+                        "name": "virt_obs_pm_stand_meas",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_stand",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_stand"
+                    },
+                    {
+                        "name": "virt_obs_pm_stand_unit",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_stand",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#unit/percentage"
+                    },
+                    {
+                        "name": "virt_dim_pm_stand_year",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_stand",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+year}"
+                    },
+                    {
+                        "name": "virt_dim_pm_stand_city",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_stand",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city",
+                        "valueUrl": "city.csv#{+city}"
+                    },
+                    {
+                        "name": "virt_dim_pm_stand_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_stand",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_dim_pm_stand_trn_op",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_stand",
+                        "propertyUrl": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op",
+                        "valueUrl": "trn_op.csv#{+trn_op}"
+                    },
+                    {
+                        "name": "virt_obs_pm_stand_type",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_stand",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_pm_stand",
+                        "virtual": true,
+                        "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#obs/{year},{city},{ons_code},{trn_op}@pm_stand",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "annual-autumn-weekday-peak-crowding-data.csv#dataset"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "year",
+                        "reference": {
+                            "resource": "government-year.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    },
+                    {
+                        "columnReference": "city",
+                        "reference": {
+                            "resource": "city.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    },
+                    {
+                        "columnReference": "trn_op",
+                        "reference": {
+                            "resource": "trn_op.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "year",
+                    "city",
+                    "ons_code",
+                    "trn_op"
+                ],
+                "aboutUrl": "annual-autumn-weekday-peak-crowding-data.csv#slice/{year},{city},{ons_code},{trn_op}"
+            }
+        },
+        {
+            "url": "government-year.csv",
+            "tableSchema": "government-year.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "city.csv",
+            "tableSchema": "city.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "trn_op.csv",
+            "tableSchema": "trn_op.table.json",
+            "suppressOutput": true
+        }
+    ],
+    "rdfs:seeAlso": [
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/measure-type",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 8
+                },
+                {
+                    "@value": 17
+                },
+                {
+                    "@value": 20
+                },
+                {
+                    "@value": 11
+                },
+                {
+                    "@value": 14
+                },
+                {
+                    "@value": 5
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/pm_pixc",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_pixc"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_pixc"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 18
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/observation-status",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": false
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 13
+                },
+                {
+                    "@value": 10
+                },
+                {
+                    "@value": 19
+                },
+                {
+                    "@value": 22
+                },
+                {
+                    "@value": 16
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_num",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "PM peak arrivals is defined as 16:00-18:59."
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "PM_Num"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/government-year",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "trn_op.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Trn_Op"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#class/trn_op"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_peak_num",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "AM peak arrivals is defined as 07:00-09:59."
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "AM_Peak_Num"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.4.4"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#structure",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataStructureDefinition"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/measure-type"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/observation-status"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/statistical-geography"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/pm_pixc"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/city"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/trn_op"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/am_pixc"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/government-year"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/pm_num"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/unit"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/pm_stand"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/am_standing"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/am_peak_num"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_stand"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_pixc"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_peak_num"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_standing"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_pixc"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_num"
+                }
+            ],
+            "http://purl.org/linked-data/cube#sliceKey": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#slice/cross-measures"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "government-year.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Government Year"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#class/government-year"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/city",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 2
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/trn_op",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/am_standing",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_standing"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_standing"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 12
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_pixc",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Percentage of passengers in excess of capacity during PM peak arrivals"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "PM_PIXC"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#portion-of-population"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/am_pixc",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_pixc"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_pixc"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 9
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_standing",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Passengers standing during AM peak arrivals"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "AM_standing"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#passengers"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#class/trn_op",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Statistical Geography"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#class/statistical-geography"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refArea"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "city.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "City"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#class/city"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_pixc",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Percentage of passengers in excess of capacity during AM peak arrivals"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "AM_PIXC"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#portion-of-population"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/statistical-geography",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/unit",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 6
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/pm_stand",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_stand"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_stand"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 21
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#slice/cross-measures",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#SliceKey"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/city"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/statistical-geography"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/government-year"
+                },
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#dimension/trn_op"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/am_peak_num",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_peak_num"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/am_peak_num"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 7
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_stand",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "PM_stand"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#AttributeProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Observation Status"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#component/pm_num",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_num"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#measure/pm_num"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 15
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#class/statistical-geography",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#class/government-year",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#class/city",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#dataset",
+            "@type": [
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataSet",
+                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/ns/dcat#Dataset"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-transport"
+                }
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "Peak crowding on a typical autumn weekday by city and train operator, annual data from 2011"
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Annual autumn weekday peak crowding data"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-13T09:22:47.957667"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-13T09:22:47.957667"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-transport"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Annual autumn weekday peak crowding data"
+                }
+            ],
+            "http://purl.org/linked-data/cube#structure": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#structure"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Annual autumn weekday peak crowding data"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "trains"
+                },
+                {
+                    "@language": "en",
+                    "@value": "services"
+                },
+                {
+                    "@language": "en",
+                    "@value": "overcrowding"
+                },
+                {
+                    "@language": "en",
+                    "@value": "standing"
+                },
+                {
+                    "@language": "en",
+                    "@value": "arrivals"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "annual-autumn-weekday-peak-crowding-data.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#dependency/government-year",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./government-year.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "government-year.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#dependency/city",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./city.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "city.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#dependency/trn_op",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./trn_op.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "trn_op.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/r",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "r"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/r",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "r"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/x",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "x"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/r",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "r"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/x",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "x"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/r",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "r"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#attribute/observation-status/x",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "x"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#unit/percentage",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
+            ],
+            "http://qudt.org/schema/qudt/isScalingOf": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/PERCENT"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasFactor": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#float",
+                    "@value": "1.0"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/PERCENT"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/PERCENT"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "percentage"
+                }
+            ]
+        },
+        {
+            "@id": "annual-autumn-weekday-peak-crowding-data.csv#unit/number",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
+            ],
+            "http://qudt.org/schema/qudt/isScalingOf": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasFactor": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#float",
+                    "@value": "1.0"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Number"
+                }
+            ]
+        }
+    ]
+}

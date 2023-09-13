@@ -1,6 +1,6 @@
 {
   "$schema": "https://purl.org/csv-cubed/qube-config/v1",
-  "title": "Peak crowding on a typical autumn weekday by city and train operator, annual from 2011",
+  "title": "Annual autumn weekday peak crowding data",
   "description": "Peak crowding on a typical autumn weekday by city and train operator, annual data from 2011",
   "creator": "https://www.gov.uk/government/organisations/department-for-transport",
   "publisher": "https://www.gov.uk/government/organisations/department-for-transport",
@@ -28,7 +28,7 @@
     "AM peak arrivals (07:00-09:59): Number of services": {
       "type": "observations",
       "measure": {
-        "label": "Count of Services arrving during AM Peak",
+        "label": "AM_Peak_Num",
         "description": "AM peak arrivals is defined as 07:00-09:59.",
         "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
       },
@@ -41,7 +41,7 @@
     "AM peak arrivals (07:00-09:59): PIXC": {
       "type": "observations",
       "measure": {
-        "label": "AM peak arrivals (07:00-09:59):PIXC",
+        "label": "AM_PIXC",
         "description": "Percentage of passengers in excess of capacity during AM peak arrivals",
         "from_existing": "https://purl.org/csv-cubed/resources/measures#portion-of-population"
       },
@@ -58,7 +58,7 @@
     "AM peak arrivals (07:00-09:59): Passengers standing": {
       "type": "observations",
       "measure": {
-        "label": "AM peak arrivals (07:00-09:59): Passengers standing",
+        "label": "AM_standing",
         "description": "Passengers standing during AM peak arrivals",
         "from_existing": "https://purl.org/csv-cubed/resources/measures#passengers"
       },
@@ -75,7 +75,7 @@
     "PM peak arrivals (16:00-18:59): Number of services": {
       "type": "observations",
       "measure": {
-        "label": "PM peak arrivals (16:00-18:59): Number of services",
+        "label": "PM_Num",
         "description": "PM peak arrivals is defined as 16:00-18:59.",
         "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
       },
@@ -92,7 +92,7 @@
     "PM peak arrivals (16:00-18:59): PIXC": {
       "type": "observations",
       "measure": {
-        "label": "PM peak arrivals (16:00-18:59): PIXC",
+        "label": "PM_PIXC",
         "description": "Percentage of passengers in excess of capacity during PM peak arrivals",
         "from_existing": "https://purl.org/csv-cubed/resources/measures#portion-of-population"
       },
@@ -109,7 +109,7 @@
     "PM peak arrivals (16:00-18:59): Passengers standing": {
       "type": "observations",
       "measure": {
-        "label": "PM peak arrivals (16:00-18:59): Passengers standing",
+        "label": "PM_stand",
         "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
       },
       "data_type": "decimal",

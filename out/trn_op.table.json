@@ -24,7 +24,7 @@
             "name": "parent_uri_identifier",
             "required": false,
             "propertyUrl": "skos:broader",
-            "valueUrl": "train-operator.csv#{+parent_uri_identifier}"
+            "valueUrl": "trn_op.csv#{+parent_uri_identifier}"
         },
         {
             "titles": "Sort Priority",
@@ -44,7 +44,7 @@
             "name": "virt_inScheme",
             "required": true,
             "propertyUrl": "skos:inScheme",
-            "valueUrl": "train-operator.csv#code-list"
+            "valueUrl": "trn_op.csv#code-list"
         },
         {
             "virtual": true,
@@ -54,6 +54,6 @@
             "valueUrl": "skos:Concept"
         }
     ],
-    "aboutUrl": "train-operator.csv#{+uri_identifier}",
+    "aboutUrl": "trn_op.csv#{+uri_identifier}",
     "primaryKey": "uri_identifier"
 }

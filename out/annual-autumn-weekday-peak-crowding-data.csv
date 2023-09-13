@@ -1,4 +1,4 @@
-Year,City,ONS Code,Train operator,AM peak arrivals (07:00-09:59): Number of services,AM peak arrivals (07:00-09:59): PIXC,obsStatus,AM peak arrivals (07:00-09:59): Passengers standing,obsStatus1,PM peak arrivals (16:00-18:59): Number of services,obsStatus2,PM peak arrivals (16:00-18:59): PIXC,obsStatus3,PM peak arrivals (16:00-18:59): Passengers standing,obsStatus4
+Year,City,ONS_Code,Trn_Op,AM_Num,AM_PIXC,obsStatus,AM_stand,obsStatus1,PM_Num,obsStatus2,PM_PIXC,obsStatus3,PM_stand,obsStatus4
 2011,birmingham,E08000025,arriva-trains-wales,6,0.0,,0.053314121037464,,6,,0.0,,0.0074534161490683,
 2011,birmingham,E08000025,chiltern-railways-note-2,8,0.0,,0.13040901007706,,8,,0.0,,0.0109739368998628,
 2011,birmingham,E08000025,crosscountry,36,0.0127553967948589,,0.0488070817361228,,42,,0.0120683851855691,,0.0570784355652561,
